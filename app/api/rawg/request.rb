@@ -7,7 +7,7 @@ module Rawg
         def self.call(http_method:, endpoint:)
             result = RestClient::Request.execute(
                 method: http_method,
-                url: "#{BASE_URL}#{endpoint}?key=#{TOKEN}",
+                url: "#{BASE_URL}#{endpoint}key=#{TOKEN}",
                 headers: {'Content-Type' => 'application/json'}
             )
             { code: result.code, status: 'Success', data: JSON.parse(result.body) }

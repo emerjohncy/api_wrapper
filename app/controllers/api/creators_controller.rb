@@ -1,7 +1,7 @@
 module Api
     class CreatorsController < ApplicationController
         def index
-            creators = Rawg::Client.creators
+            creators = Rawg::Client.creators(params[:page_num])
             render json: creators
         end
 
