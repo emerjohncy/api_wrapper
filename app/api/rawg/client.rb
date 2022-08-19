@@ -7,5 +7,9 @@ module Rawg
         def self.creators
             response = Request.call(http_method: 'get', endpoint: "/creators")
         end
+
+        def self.creator(id)
+            response = Request.call(http_method: 'get', endpoint: "/creators/#{id}")
+        end
     end
 end
