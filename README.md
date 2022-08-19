@@ -54,7 +54,7 @@ rails s
 /api/creator-roles
 ```
 #### Get a list of game creators
-Since the API can only return a maximum of 40 results, I added params[:page_num] to possibly get all creators
+Since the API can only return a maximum of 40 results, I added params[:page_num] to possibly get all 25,000+ creators
 ```
 /api/creators/:page_num
 ```
