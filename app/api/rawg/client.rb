@@ -5,7 +5,7 @@ module Rawg
         end
         
         def self.creators(page_num)
-            response = Request.call(http_method: 'get', endpoint: "/creators?&page=#{page_num}&page_size=40&")
+            response = Request.call(http_method: 'get', endpoint: "/creators?page=#{page_num}&page_size=40&")
         end
 
         def self.creator(id)
