@@ -28,7 +28,7 @@ RSpec.describe "Rawg::Client" do
         expect(creators_response[:code]).to eq(404)
     end
     
-    # GET /creators/{id}
+# GET /creators/{id}
     let (:creator_response) {Rawg::Client.creator(1)}
     it "correctly return some data" do
         expect(creator_response).to be_kind_of(Hash)
