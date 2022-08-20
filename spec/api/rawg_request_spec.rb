@@ -5,7 +5,7 @@ describe Rawg::Request do
         request = Rawg::Request.call(http_method: 'get',endpoint: "/creator-roles?")
         expect(request.count).to be(3)
         expect(request[:code]).to be(200)
-        expect(request[:status]).to be("Success")
+        expect(request[:status]).to eq("Success")
     end
     
     it "should contain 3 keys even when it errors" do
